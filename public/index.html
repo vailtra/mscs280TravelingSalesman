@@ -18,20 +18,23 @@
     </head>
  
     <body>
-        <div>
-            <h1>The Traveling Salesman Problem</h1>
-        </div>
-        <div>
-            <p>Problem Statement</p>
-        </div>
-        <div>
-            <p>Enter A city name</p>
-            <form action="/action">
-                <label for="fname">City name:</label><br>
-                <input type="text" id="fname" name="fname" value="Menomonie WI"><br>
-                <br><br>
-                <input type="submit" value="Submit">
-              </form>
+        <div >
+            <div id='pageTitle' >
+                <p>The Traveling Salesman Problem</p>
+            </div>
+            <div id='pStatement'>
+                <p>Problem Statement:</p>
+                <p id ="pDescription">"Given a list of cities and the distances between each pair of cities, what is the shortest possible route that visits each city exactly once and returns to the origin city?"</p>
+            </div>
+            <div id= form>
+                <p>Enter A city name</p>
+                <form action="/action">
+                    <label for="fname">City name:</label><br>
+                    <input type="text" id="fname" name="fname" value="Menomonie WI"><br>
+                    <br><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
         </div>
     </body>
 </html>

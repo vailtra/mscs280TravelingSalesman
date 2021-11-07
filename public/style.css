@@ -1,7 +1,29 @@
 body {
-    background-color: lightblue;
+    background-color: rgb(0, 0, 0);
   }
 
   div{
     text-align: center;
+    background-color: 
+    rgb(255, 241, 241);
+    border-radius: 25px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  #pageTitle p{
+    font-size: 100px;
+
+  }
+
+  #pStatement p{
+    text-align: left;
+    font-size: 30px;
+    font-weight: bold;
+  }
+ #pDescription {
+  text-align: left;
+  margin-left: 100px;
+  font-size: 15px;
+  
   }
