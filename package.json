@@ -1,0 +1,23 @@
+{
+  "name": "mscs280travelingsalesman",
+  "version": "1.0.0",
+  "description": "A Project for MSCS 280 at uwstout",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vailtra/mscs280TravelingSalesman.git"
+  },
+  "author": "Tracen Vail",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vailtra/mscs280TravelingSalesman/issues"
+  },
+  "homepage": "https://github.com/vailtra/mscs280TravelingSalesman#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
