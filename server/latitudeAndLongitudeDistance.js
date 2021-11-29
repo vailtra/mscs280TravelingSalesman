@@ -17,6 +17,9 @@ export function distance(firstLatitude,
     // caluculate the great circle difference using haversine formula
     let greatCircleDifference = haversine(longitudeDifference, latitudeDifference, firstLatitude, secondLatitude);
 
+    // Round the greatCircleDifferene to work with our c++ program
+    greatCircleDifference = Math.round(greatCircleDifference);
+
     // return haversineOutput times radius
     return (greatCircleDifference * radius);
 }
