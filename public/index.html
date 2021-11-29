@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+
+ 
+<html lang="en">
+    <head>
+        <title>
+            MSCS-280
+        </title>
+
+        <link rel="stylesheet" type="text/css" href="./style.css">
+
+    </head>
+ 
+    <body>
+        <div >
+            <div id='pageTitle' >
+                <p>The Traveling Salesman Problem</p>
+            </div>
+            <div id='pStatement'>
+                <p>Problem Statement:</p>
+                <p id ="pDescription">"Given a list of cities and the distances between each pair of cities, what is the shortest possible route that visits each city exactly once and returns to the origin city?"</p>
+            </div>
+            <form action ="Traveling_Salesman" method = "POST" id="form">
+  
+                <div class="formDivs"><label for="secret_name"> Start City: </label>
+                <input required type="text" id="secret_name" name="secret_name"><br></div> 
+                <div class="formDivs"> <label for="namespace" id="namespaceLabel"> Longitude:</label>
+                <input required type="text" id="namespace" name = "namespace"><br></div>
+                <div class="formDivs"> <label for="namespace" id="namespaceLabel"> Latitude:</label>
+                <input required type="text" id="namespace" name = "namespace"><br></div>            
+                <div id="field_div">
+                  <p id='input_text1'>
+                  <label for='key'>City To Travel To</label>
+                    <input type='text' class='keym' id='key' placeholder='City Name' name = "key" required>
+                    <input type='text' class='longitude' id='longitude' placeholder='Longitude' name = "longitude" required>
+                    <input type='text' class='latitude' id='latitude' placeholder='Latitude' name = "latitude" required>
+                   
+                  </p>
+                </div>
+          
+                <input type="button" id='addButton' value="Add A City" onclick="add_field();"><br>
+                <input type="submit" id='submitButton' value="Submit">
+          
+            </form>
+               
+            </div>
+        </div>
+    </body>
+    <script src="dynamicForm.js"></script>
+</html>
