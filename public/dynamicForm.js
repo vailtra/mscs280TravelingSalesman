@@ -61,7 +61,7 @@ function add_field()
   document.getElementById("label"+total_text).appendChild(keybox)
   document.getElementById("label"+total_text).appendChild(longbox)
   document.getElementById("label"+total_text).appendChild(latbox)
-  //document.getElementById("label"+total_text).appendChild(eye)
+  
 
   document.getElementById("label"+total_text).appendChild(btn)
 
