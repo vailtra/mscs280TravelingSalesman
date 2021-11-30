@@ -16,14 +16,14 @@ app.get('/', function (req, res) {
   res.send('Hello World');
 })
 
-app.get('/index.html', function (req, res) {
-  res.sendFile( __dirname + "/" + "index.html" );
+app.get('/test', function (req, res) {
+  res.send("test")
 })
 
-app.use('./Traveling_Salesman'), function(req,res){
-  console.log(req.body.longitude)
-  res.sendFile( __dirname + "/" + "index.html" );
-}
+app.post('/Traveling_Salesman', function(req,res){
+  
+  res.sendFile( path.join(__dirname, "public", "index.html" ));
+})
 
 var server = app.listen(8080, function () {
   var host = server.address().address
