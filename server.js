@@ -1,8 +1,10 @@
 const express = require('express')
 const path = require('path')
 const bodyParser = require('body-parser')
+const fs = require('fs')
 
 const app = express()
+
 
 app.use(bodyParser.urlencoded({
   extended: false
@@ -17,11 +19,13 @@ app.get('/', function (req, res) {
 })
 
 app.get('/test', function (req, res) {
+  
   res.send("test")
 })
 
 app.post('/Traveling_Salesman', function(req,res){
-  
+  fs.writeFileSync(path.join(__dirname, "public", "list.json"), JSON.stringify(req.body), { encoding: 'utf8' })
+  console.log(req.body)
   res.sendFile( path.join(__dirname, "public", "index.html" ));
 })
 
