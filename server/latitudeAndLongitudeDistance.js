@@ -26,12 +26,14 @@ module.exports = function(Body) {
         } 
         dist[i] = arr
     }
+    var str = "[\n"
+    for(var i = 0; i < dist.length; i++){
+        console.log(dist[i])
+        str = str + "["+ dist[i] + "],\n"
+    }
+    str = str + "]"
 
-    // for(var i = 0; i < dist.length; i++){
-    //     console.log(dist[i])
-    // }
-
-    //return dist
+    return str
 }
 
 function distance(firstLatitude,

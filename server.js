@@ -22,7 +22,8 @@ app.get('/', function (req, res) {
 app.get('/test', function (req, res) {
   
   res.send("test")
-  exec("./travel", (error, stdout, stderr) => {
+  exec("./travel2.0", (error, stdout, stderr) => {
+    console.log(`stdout: ${stdout}`);
     if (error) {
         console.log(`error: ${error.message}`);
         return;
@@ -31,19 +32,19 @@ app.get('/test', function (req, res) {
         console.log(`stderr: ${stderr}`);
         return;
     }
-    console.log(`stdout: ${stdout}`);
+    
 });
 })
 
 app.post('/Traveling_Salesman', function(req,res){
   //fs.writeFileSync(path.join(__dirname, "public", "list.json"), JSON.stringify(req.body), { encoding: 'utf8' })
   // call func to formate dist between city
-  longlat(req.body)
+  fs.writeFileSync(path.join(__dirname, "public", "list.json"), longlat(req.body), { encoding: 'utf8' })
   
-  res.sendFile( path.join(__dirname, "public", "index.html" ));
+  //res.sendFile( path.join(__dirname, "public", "index.html" ));
 })
 
-var server = app.listen(8080, function () {
+var server = app.listen(8081, function () {
   var host = server.address().address
   var port = server.address().port
   
