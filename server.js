@@ -22,7 +22,7 @@ app.get('/', function (req, res) {
 app.get('/test', function (req, res) {
   
   res.send("test")
-  exec("echo hello", (error, stdout, stderr) => {
+  exec("./travel", (error, stdout, stderr) => {
     if (error) {
         console.log(`error: ${error.message}`);
         return;
