@@ -25,7 +25,9 @@ module.exports = function(Body) {
                
         } 
         dist[i] = arr
+
     }
+    console.log(dist)
 
     // for(var i = 0; i < dist.length; i++){
     //     console.log(dist[i])
