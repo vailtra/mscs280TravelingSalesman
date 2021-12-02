@@ -27,9 +27,11 @@ module.exports = function(Body) {
         dist[i] = arr
     }
 
-    for(var i = 0; i < dist.length; i++){
-        console.log(dist[i])
-    }
+    // for(var i = 0; i < dist.length; i++){
+    //     console.log(dist[i])
+    // }
+
+    //return dist
 }
 
 function distance(firstLatitude,
@@ -40,16 +42,7 @@ function distance(firstLatitude,
     
         // Radius of earth in miles.
 
-    // const fs = require('fs')
-  
-    // fs.readFile('public', (err, data) => {
-    //     if (err) throw err;
-    
-    //     console.log(data.toString());
-    // })
-    
 
-    
     let radius = 3956;
 
     //convert to radians
@@ -88,4 +81,3 @@ function haversine(longDifference, latDifference, lat1, lat2) {
 
 }
 
-// module.exports = distance

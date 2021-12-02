@@ -2,8 +2,8 @@ const express = require('express')
 const path = require('path')
 const bodyParser = require('body-parser')
 const fs = require('fs')
-const longlat =require('./latitudeAndLongitudeDistance')
-
+const longlat =require('./server/latitudeAndLongitudeDistance')
+const {exec} = require("child_process")
 const app = express()
 
 
@@ -22,13 +22,24 @@ app.get('/', function (req, res) {
 app.get('/test', function (req, res) {
   
   res.send("test")
+  exec("./travel", (error, stdout, stderr) => {
+    if (error) {
+        console.log(`error: ${error.message}`);
+        return;
+    }
+    if (stderr) {
+        console.log(`stderr: ${stderr}`);
+        return;
+    }
+    console.log(`stdout: ${stdout}`);
+});
 })
 
 app.post('/Traveling_Salesman', function(req,res){
   //fs.writeFileSync(path.join(__dirname, "public", "list.json"), JSON.stringify(req.body), { encoding: 'utf8' })
   // call func to formate dist between city
   longlat(req.body)
-  console.log(req.body)
+  
   res.sendFile( path.join(__dirname, "public", "index.html" ));
 })
 
