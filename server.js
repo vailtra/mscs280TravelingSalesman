@@ -23,7 +23,7 @@ app.get('/test', function (req, res) {
   
   res.send("test")
   let executable = `./${travel}`
-  exec("start travel", (error, stdout, stderr) => {
+  exec("/c/Users/VailTracen/desktop/mscs/mscs280Traveling./travel", (error, stdout, stderr) => {
     if (error) {
         console.log(`error: ${error.message}`);
         return;
