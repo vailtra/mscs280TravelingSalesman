@@ -36,6 +36,7 @@ app.get('/p', function (req, res) {
 })
 app.get('/test', function (req, res) {
   
+
   //res.send("test")
   exec("./travel2.0", (error, stdout, stderr) => {
     res.send(`stdout: ${stdout}`);
