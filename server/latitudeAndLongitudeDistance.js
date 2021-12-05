@@ -25,13 +25,16 @@ module.exports = function(Body) {
                
         } 
         dist[i] = arr
+
     }
+
     var str = "[\n"
     for(var i = 0; i < dist.length; i++){
         console.log(dist[i])
         str = str + "["+ dist[i] + "],\n"
     }
     str = str + "]"
+
 
     return str
 }

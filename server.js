@@ -6,7 +6,7 @@ const longlat =require('./server/latitudeAndLongitudeDistance')
 const {exec} = require("child_process")
 const app = express()
 
-
+const travel = 'travel'
 app.use(bodyParser.urlencoded({
   extended: false
 }));
@@ -39,6 +39,7 @@ app.get('/test', function (req, res) {
   //res.send("test")
   exec("./travel2.0", (error, stdout, stderr) => {
     res.send(`stdout: ${stdout}`);
+
     if (error) {
         console.log(`error: ${error.message}`);
         return;
